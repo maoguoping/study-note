@@ -7,6 +7,9 @@
  */
 
 import React, { useState, useEffect } from 'react';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -24,15 +27,19 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-
+import HomeScreen from './pages/home/Home'
+import DetailsScreen from './pages/details/Details'
+const AppNavigator = createStackNavigator({
+  Home: HomeScreen,
+  Details: DetailsScreen
+},{
+  initialRouteName: 'Home',
+});
+const AppContainer = createAppContainer(AppNavigator);
 const App: () => React$Node = () => {
-  const [text, setText] = useState('默认文本')
   return (
     <>
-      <View style={{flex: 1, backgroundColor: 'skyblue', flexDirection: 'row'}}>
-        <TextInput   placeholder="Type here to translate!" style={styles.inputBox} onChangeText={(text) => {setText(text)}}></TextInput>
-        <Text style={{flex: 1, backgroundColor: 'skyblue', flexDirection: 'row'}}>{text}</Text>
-      </View>
+      <AppContainer/>
     </>
   );
 };
@@ -41,4 +48,4 @@ const styles = StyleSheet.create({
   inputBox: {flex: 1, backgroundColor: '#fff', flexDirection: 'row', height:40}
 });
 
-export default App;
+export default createAppContainer(AppNavigator);
