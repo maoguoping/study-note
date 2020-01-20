@@ -13,6 +13,7 @@ import {StyleSheet} from 'react-native';
 
 import IndexScreen from './pages';
 import DetailScreen from './pages/details';
+import NoteScreen from './pages/note';
 import ModalScreen from './components/modal/Modal';
 const MainStack = createStackNavigator(
   {
@@ -33,6 +34,17 @@ const MainStack = createStackNavigator(
       screen: DetailScreen,
       navigationOptions: {
         title: '详情',
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+    Note: {
+      screen: NoteScreen,
+      navigationOptions: {
+        title: '笔记',
         backgroundColor: '#f4511e',
       },
       headerTintColor: '#fff',

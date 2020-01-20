@@ -44,8 +44,8 @@ const Home: () => React$Node = props => {
           {text}
         </Text>
         <Button
-          title="跳转详情页"
-          onPress={() => props.navigation.navigate('Details')}
+          title="跳转笔记页"
+          onPress={() => props.navigation.navigate('Note')}
         />
         <Button
           onPress={() => props.navigation.navigate('MyModal')}

@@ -27,7 +27,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-const Details: () => React$Node = () => {
+const Details = () => {
   const [text, setText] = useState('默认文本');
   return (
     <>
