@@ -6,46 +6,75 @@
  * @flow
  */
 
-import React, { useState, useEffect } from 'react';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import React, {useState, useEffect} from 'react';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
+import {StyleSheet} from 'react-native';
 
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-  TextInput
-} from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import HomeScreen from './pages/home/Home'
-import DetailsScreen from './pages/details/Details'
-const AppNavigator = createStackNavigator({
-  Home: HomeScreen,
-  Details: DetailsScreen
-},{
-  initialRouteName: 'Home',
-});
-const AppContainer = createAppContainer(AppNavigator);
+import IndexScreen from './pages';
+import DetailScreen from './pages/details';
+import ModalScreen from './components/modal/Modal';
+const MainStack = createStackNavigator(
+  {
+    Index: {
+      screen: IndexScreen,
+      navigationOptions: {
+        title: '首页',
+        headerStyle: {
+          backgroundColor: '#f4511e',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      },
+    },
+    Details: {
+      screen: DetailScreen,
+      navigationOptions: {
+        title: '详情',
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+  },
+  {
+    initialRouteName: 'Index',
+  },
+);
+const RootStack = createStackNavigator(
+  {
+    Main: {
+      screen: MainStack,
+    },
+    MyModal: {
+      screen: ModalScreen,
+    },
+  },
+  {
+    mode: 'card',
+    headerMode: 'none',
+  },
+);
+const AppContainer = createAppContainer(RootStack);
 const App: () => React$Node = () => {
   return (
     <>
-      <AppContainer/>
+      <AppContainer />
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  inputBox: {flex: 1, backgroundColor: '#fff', flexDirection: 'row', height:40}
+  inputBox: {
+    flex: 1,
+    backgroundColor: '#fff',
+    flexDirection: 'row',
+    height: 40,
+  },
 });
 
-export default createAppContainer(AppNavigator);
+export default createAppContainer(RootStack);
