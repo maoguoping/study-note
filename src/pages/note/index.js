@@ -11,7 +11,7 @@ import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {Container, Header, Content, Accordion} from 'native-base';
 import {YellowBox} from 'react-native';
-
+import {readFile, ExternalDirectoryPath} from '../../utils/file'
 import {
   SafeAreaView,
   StyleSheet,
@@ -24,17 +24,28 @@ import {
 YellowBox.ignoreWarnings([
   'VirtualizedLists should never be nested', // TODO: Remove when fixed
 ]);
-const dataArray = [
-  {title: 'First Element', content: 'Lorem ipsum dolor sit amet'},
-  {title: 'Second Element', content: 'Lorem ipsum dolor sit amet'},
-  {title: 'Third Element', content: 'Lorem ipsum dolor sit amet'},
-];
-const Note = () => {
-  const [text, setText] = useState('默认文本');
+const Note = (props) => {
+  const { navigation } = props
+  const [questionList, setQuestionList] = useState([])
+  const path = navigation.getParam('filePath')
+  useEffect(() =>　{
+    readFile(path).then(res => {
+      let data = JSON.parse(res)
+      let list = data.content.questionList.map(item => {
+        return {
+          title:　item.title,
+          content: item.value
+        }
+      })
+      setQuestionList(list)
+    }).catch(err => {
+      setQuestionList([])
+    })
+  }, [])
   return (
     <Container>
       <Content padder>
-        <Accordion dataArray={dataArray} expanded={0} />
+        <Accordion dataArray={questionList} expanded={0} />
       </Content>
     </Container>
   );
