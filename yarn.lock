@@ -5254,7 +5254,7 @@ react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6, react-is
 
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
-  resolved "http://r.cnpmjs.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+  resolved "https://r.cnpmjs.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
 react-native-drawer@2.5.1:
@@ -5336,7 +5336,7 @@ react-native-screens@^2.0.0-alpha.23:
 
 react-native-tab-view@^2.11.0:
   version "2.11.0"
-  resolved "http://r.cnpmjs.org/react-native-tab-view/download/react-native-tab-view-2.11.0.tgz#2e57d1f617ccc88c7f452708804f3409f880b700"
+  resolved "https://r.cnpmjs.org/react-native-tab-view/download/react-native-tab-view-2.11.0.tgz#2e57d1f617ccc88c7f452708804f3409f880b700"
   integrity sha1-LlfR9hfMyIx/RScIgE80CfiAtwA=
 
 react-native-vector-icons@^6.6.0:
@@ -5393,7 +5393,7 @@ react-navigation-stack@^2.0.13:
 
 react-navigation-tabs@^2.7.0:
   version "2.7.0"
-  resolved "http://r.cnpmjs.org/react-navigation-tabs/download/react-navigation-tabs-2.7.0.tgz#68505910164a51c44710f835def8fe29360f346a"
+  resolved "https://r.cnpmjs.org/react-navigation-tabs/download/react-navigation-tabs-2.7.0.tgz#68505910164a51c44710f835def8fe29360f346a"
   integrity sha1-aFBZEBZKUcRHEPg13vj+KTYPNGo=
   dependencies:
     hoist-non-react-statics "^3.3.0"
@@ -6320,9 +6320,9 @@ tmp@^0.0.33:
     os-tmpdir "~1.0.2"
 
 tmpl@1.0.x:
-  version "1.0.4"
-  resolved "https://registry.npm.taobao.org/tmpl/download/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
-  integrity sha1-I2QN17QtAEM5ERQIIOXPRA5SHdE=
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
+  integrity sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
