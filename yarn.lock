@@ -3919,11 +3919,9 @@ json-stringify-safe@~5.0.1:
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
 
 json5@^2.1.0:
-  version "2.1.1"
-  resolved "https://registry.npm.taobao.org/json5/download/json5-2.1.1.tgz#81b6cb04e9ba496f1c7005d07b4368a2638f90b6"
-  integrity sha1-gbbLBOm6SW8ccAXQe0NoomOPkLY=
-  dependencies:
-    minimist "^1.2.0"
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
+  integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
 jsonfile@^2.1.0:
   version "2.4.0"
@@ -5254,7 +5252,7 @@ react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6, react-is
 
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
-  resolved "http://r.cnpmjs.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+  resolved "https://r.cnpmjs.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
 react-native-drawer@2.5.1:
@@ -5336,7 +5334,7 @@ react-native-screens@^2.0.0-alpha.23:
 
 react-native-tab-view@^2.11.0:
   version "2.11.0"
-  resolved "http://r.cnpmjs.org/react-native-tab-view/download/react-native-tab-view-2.11.0.tgz#2e57d1f617ccc88c7f452708804f3409f880b700"
+  resolved "https://r.cnpmjs.org/react-native-tab-view/download/react-native-tab-view-2.11.0.tgz#2e57d1f617ccc88c7f452708804f3409f880b700"
   integrity sha1-LlfR9hfMyIx/RScIgE80CfiAtwA=
 
 react-native-vector-icons@^6.6.0:
@@ -5393,7 +5391,7 @@ react-navigation-stack@^2.0.13:
 
 react-navigation-tabs@^2.7.0:
   version "2.7.0"
-  resolved "http://r.cnpmjs.org/react-navigation-tabs/download/react-navigation-tabs-2.7.0.tgz#68505910164a51c44710f835def8fe29360f346a"
+  resolved "https://r.cnpmjs.org/react-navigation-tabs/download/react-navigation-tabs-2.7.0.tgz#68505910164a51c44710f835def8fe29360f346a"
   integrity sha1-aFBZEBZKUcRHEPg13vj+KTYPNGo=
   dependencies:
     hoist-non-react-statics "^3.3.0"
